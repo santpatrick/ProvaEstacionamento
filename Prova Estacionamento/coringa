@@ -1,0 +1,30 @@
+package views;
+
+import controllers.AutomovelController;
+import models.Automovel;
+import utils.Console;
+import views.contracts.IViews;
+
+public class CadastrarAutomovel implements IViews{
+    
+    @Override
+    public void renderizar(){
+        
+        Automovel automovel = new Automovel();
+        AutomovelController automovelController = new AutomovelController();
+
+        System.out.println("\n == CADASTRO DE AUTOMÓVEL == \n");
+    
+        automovel.setModelo(Console.readString("Informe o modelo: "));
+        automovel.setPlaca(Console.readString("Informe a placa :"));
+        automovel.setCor(Console.readString("Informe a cor: "));
+
+        if(automovelController.cadastrar(automovel)){
+            System.out.println("\n Cadastrado com SUCESSO !! \n");
+        }else{
+            System.out.println("\n Ja cadastrado !! \n");
+        }
+
+
+    }
+}

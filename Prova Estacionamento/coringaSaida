@@ -1,0 +1,8 @@
+            System.out.println("\n DADOS \n");
+            int tempo = carro.getTempo(); 
+
+            int valor = calculo.calcular(tempo, 5);
+
+            System.out.println("\n DADOS \n");
+            System.out.println("\n Tempo: "+tempo);
+            System.out.println("\n Tempo: "+valor);
